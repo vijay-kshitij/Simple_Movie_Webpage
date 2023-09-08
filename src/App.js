@@ -14,14 +14,22 @@ const App=() => {
   const [movies, setMovies] = useState([]);
   
   useEffect(() => {
-    searchMovies("Spiderman");
+    searchMovies("Avengers");
  }, []);
 
   const searchMovies = async(title) => {
      const response = await fetch(`${API_URL}&s=${title}`);  //this is gonna call the api
      const data = await response.json();  //once we get the response, we need to get the data
 
-     setMovies(data.Search);  //allows us to populate movies
+     const sortedMovies = data.Search.sort((a,b) => {
+       //Assuming the release year is in 'YYYY'
+       const yearA = parseInt(a.Year);
+       const yearB = parseInt(b.Year);
+       return yearB - yearA;
+
+     });
+
+     setMovies(sortedMovies);  //allows us to populate movies
   }; // function to fetch data. async means it's gonna take some time to fetch data
   
 
