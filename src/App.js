@@ -21,6 +21,7 @@ const App=() => {
      const response = await fetch(`${API_URL}&s=${title}`);  //this is gonna call the api
      const data = await response.json();  //once we get the response, we need to get the data
 
+    //sort movies by release year before setting the state
      const sortedMovies = data.Search.sort((a,b) => {
        //Assuming the release year is in 'YYYY'
        const yearA = parseInt(a.Year);
