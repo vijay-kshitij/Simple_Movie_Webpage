@@ -10,7 +10,7 @@
 
 2. **Search Icon:** An intuitive search icon accompanies the search bar, offering a familiar visual cue to initiate searches. Click or tap on it, and you're on your way to discovering movie information.
 
-3. **Movie Listings:** Below the search bar, MovieVerse displays a list of movies that match your search query. Each movie entry is accompanied by essential information such as title, release date, allowing users to quickly assess their options.
+3. **Movie Listings:** Below the search bar, MovieVerse displays a list of movies that match your search query. Movies are sorted by their release year from most recent to least. Each movie entry is accompanied by essential information such as title, release date, allowing users to quickly assess their options.
 
 4. **External API Integration:** To ensure accurate and up-to-date movie data, MovieVerse leverages an external API, ensuring that users have access to the most current information about their chosen movies.
 
